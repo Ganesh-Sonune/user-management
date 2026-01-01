@@ -9,7 +9,9 @@ COPY mvnw.cmd .
 COPY .mvn .mvn
 COPY src src
 
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
+
 
 
 # -------- RUN STAGE --------
